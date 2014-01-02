@@ -1,7 +1,7 @@
 <?php get_header(); ?>
 <section class="lotus-logo fn-clear">
     <hgroup class="violet-site">
-        <h1><?php bloginfo( 'name' ); ?><span>.net</span></h1>
+        <h1><?php bloginfo( 'name' ); ?></h1>
         <h2><?php bloginfo('description'); ?></h2>
     </hgroup><!-- //violet-site -->	
 </section>

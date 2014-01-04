@@ -1,0 +1,25 @@
+---
+layout: default
+---
+
+<p class="lotus-breadcrub">
+    <a href="{{ site.url }}/index.html" rel="nofollow" rel="nofollow" title="首页">Home</a>
+    <span> &gt; </span>
+    <a href="{{ site.url }}/archives.html" rel="nofollow" >Archives</a>
+    <span> &gt; </span>
+    {{ page.title }}
+</p>
+<h1 class="lotus-pagetit">{{ page.title }}</h1>
+<p class="lotus-meta">Publish: <time class="date" pubdate="{{ page.date  | date: "%B %e, %Y" }}">{{ page.date | date: "%B %e, %Y" }}</time></p>
+<article  itemscope itemtype="http://schema.org/Article" class="lotus-post">
+{{ content }}
+</article>
+<p class="lotus-anno">声明: 本文采用 <a href="http://creativecommons.org/licenses/by-nc-sa/3.0/" rel="nofollow" target="_blank" title="自由转载-非商用-非衍生-保持署名">BY-NC-SA</a> 授权。转载请注明转自: <a href="{{ post.url }}" title="" rel="nofollow">{{ site.author.name }}</a></p>
+<section class="lotus-nextpage fn-clear">
+    {% if page.previous %}
+    <div class="lotus-nextpage-left"><a class="prev" href="{{ page.previous.url }}" rel="prev">&laquo;&nbsp;{{ page.previous.title | truncatewords:5 }}</a></div>
+    {% endif %}
+    {% if page.next %}
+    <div class="lotus-nextpage-right"><a class="next" href="{{ page.next.url }}" rel="next">{{ page.next.title | truncatewords:5 }}&nbsp;&raquo;</a></div>
+    {% endif %}
+</section>

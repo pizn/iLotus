@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html id="J-html" class="">
+<head>
+     <!--
+     **
+     * Author:         掌心
+     * Contact:        zhanxin.info@gmail.com
+     * Theme Name:     iLotus
+     **
+    -->
+    <meta charset="UTF-8" />
+    <title>
+        {% if page.title %}
+            {{ page.title }}
+        {% else %}
+            {{ site.title }}
+        {% endif %}
+    </title>
+    <meta name="generator" content="Jekyll" />
+    <meta name="author" content="{{ site.author.name }}" />
+    <meta name="description" content="{{ page.description }}" />
+    <meta name="keywords" content="{{ page.keywords | join: ',' }}" />
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" media="all" href="{{ site.url }}/static/style.css" />
+    <!--[if lt IE 9]>
+    <script src="{{ site.url }}/static/js/html5.js" type="text/javascript"></script>
+    <![endif]-->
+    <script src="{{ site.url }}/static/js/jquery.js" type="text/javascript"></script>
+</head>
+<body itemscope itemtype="http://schema.org/WebPage" class="home blog lotus index">
+    <nav class="lotus-nav">
+        <ul>
+            {% for link in site.nav %}
+            {% assign active = nil %}
+            {% assign homeClass = nil %}
+            {% if page.url == link.url%}
+              {% assign active = 'current' %}
+            {% endif %}
+            {% if link.class == 'home' %}
+                {% assign homeClass = 'home ' %}
+            {% endif %}
+            <li class="{{ homeClass }}{{ active }}">
+                <a href="{{ link.url }}" rel="bookmark" title="{{link.text}}">
+                    <i class="{{ link.icon }}"></i>
+                </a>
+                {{ indicator }}
+            </li>
+            {% endfor %}
+        </ul>
+    </nav>
+
+    {{ content }}
+
+<footer class="lotus-footer">
+	<p>Copyright © 2010–2014 {{ site.title }} All rights reserved. Design by <a href="http://www.zhanxin.info" target="_blank">zhanxin</a>.</p>
+</footer>
+<script src="{{ site.url }}/static/js/jquery.scrollTo.js" type="text/javascript"></script>
+<script src="{{ site.url }}/static/js/iLotus.js" type="text/javascript"></script>
+</body>
+</html>

@@ -17,6 +17,6 @@
 
 ## Jekyll 主题使用方法
 
-```
-//敬请期待
-```
+1. ```iLotus-jekyll```目录下运行```jekyll server```即可通过```localhost:4000```访问；
+2. 可通过```_config.yml```文件修改或增加自定义内容；
+3. 这里只给出了2个页面的定义样式（archives和contact）,可以自己根据需求定义。

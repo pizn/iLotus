@@ -770,6 +770,7 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
 	.lotus {
 		width: 600px;
 	}
+
 }
 /*************************
  * iPhone
@@ -820,6 +821,9 @@ h1, h2, h3, h4, h5, h6{ font-weight: 500; font-weight: 700\9; color:#333; }
         border-bottom: 1px solid #dfdfdf;
     }
     .iLight .lotus-nav ul li { border-top: 0; }
+    .lotus-breadcrub {
+        padding-top: 10px;
+    }
 }
 /*
  * for print

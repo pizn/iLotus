@@ -64,6 +64,10 @@ kramdown:
     coderay_bold_every: 10
     coderay_css: style
 
+#iLotus configs
+iLotus:
+  columns: 1
+
 #站点基础配置
 title: iLotus
 subTitle: Just another Jekyll blog.

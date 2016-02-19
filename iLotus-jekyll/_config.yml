@@ -67,6 +67,7 @@ kramdown:
 #iLotus configs
 iLotus:
   columns: 1
+  begin: 2011
 
 #站点基础配置
 title: iLotus
